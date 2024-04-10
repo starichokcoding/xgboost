@@ -8,9 +8,9 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
-@st.cache_data
-def load_data():
-    return shap.datasets.adult()
+#@st.cache_data
+#def load_data():
+#    return shap.datasets.adult()
 
 @st.experimental_memo
 def load_model(X, y):
