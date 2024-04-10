@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 
 @st.experimental_memo
 def load_data():
-    return shap.datasets.diabetes()
+    return shap.datasets.adult()
 
 @st.experimental_memo
 def load_model(X, y):
