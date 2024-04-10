@@ -38,7 +38,7 @@ with st.expander('About the app'):
 
 st.header('Input data')
 X,y = shap.datasets.iris()
-y = y.to_numeric()
+y = int(y)
 X_display,y_display = shap.datasets.iris(display=True)
 
 with st.expander('About the data'):
