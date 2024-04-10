@@ -36,7 +36,7 @@ with st.expander('About the app'):
                 ''')
 
 st.header('Input data')
-X,y = load_data()
+X,y = shap.datasets.adult()
 X_display,y_display = shap.datasets.adult(display=True)
 
 with st.expander('About the data'):
