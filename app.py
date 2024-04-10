@@ -1,6 +1,5 @@
-%pip install shap 
 import streamlit as st
-# from streamlit_shap import st_shap
+from streamlit_shap import st_shap
 import shap
 from sklearn.model_selection import train_test_split
 import xgboost
