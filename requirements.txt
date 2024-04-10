@@ -1,4 +1,4 @@
 streamlit
 streamlit-shap
-sklearn
+scikit-learn
 xgboost
