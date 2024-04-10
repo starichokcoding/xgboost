@@ -8,7 +8,7 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
-@st.experimental_memo
+@st.cache_data
 def load_data():
     return shap.datasets.adult()
 
