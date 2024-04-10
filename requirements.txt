@@ -2,3 +2,4 @@ streamlit
 streamlit-shap
 scikit-learn
 xgboost
+matplotlib
