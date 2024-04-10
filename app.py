@@ -37,7 +37,7 @@ with st.expander('About the app'):
 
 st.header('Input data')
 X,y = shap.datasets.adult()
-X_display,y_display = shap.datasets.adult(display=True)
+X_display,y_display = shap.datasets.adult()
 
 with st.expander('About the data'):
     st.write('Adult census data is used as the example dataset.')
