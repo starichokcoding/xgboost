@@ -1,4 +1,4 @@
-!pip install shap 
+%pip install shap 
 import streamlit as st
 # from streamlit_shap import st_shap
 import shap
