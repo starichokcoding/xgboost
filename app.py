@@ -38,7 +38,6 @@ with st.expander('About the app'):
 
 st.header('Input data')
 X,y = shap.datasets.iris()
-y = y.astype(int)
 X_display,y_display = shap.datasets.iris(display=True)
 
 with st.expander('About the data'):
@@ -51,7 +50,7 @@ with st.expander('y'):
 st.header('SHAP output')
 
 # train XGBoost model
-model = load_model(X, y)
+model = xgboost.XGBRegressor().fit(X, y)
 
 # compute SHAP values
 explainer = shap.Explainer(model, X)
@@ -70,3 +69,5 @@ with st.expander('Force plot'):
     st_shap(shap.force_plot(explainer.expected_value, shap_values[0,:], X_display.iloc[0,:]), height=200, width=1000)
     st.subheader('First thousand data instance')
     st_shap(shap.force_plot(explainer.expected_value, shap_values[:1000,:], X_display.iloc[:1000,:]), height=400, width=1000)
+    st.subheader('Feature importance')
+    st_shap(shap.plots.bar(shap_values), height=400, width=1000)
