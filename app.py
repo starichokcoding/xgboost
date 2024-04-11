@@ -57,11 +57,11 @@ explainer = shap.Explainer(model, X)
 shap_values = explainer(X)
 
 with st.expander('Waterfall plot'):
-    st_shap(shap.plots.waterfall(shap_values[0]), height=300)
+    st_shap(shap.plots.waterfall(shap_values[0]), height=400)
 with st.expander('Beeswarm plot'):
-    st_shap(shap.plots.beeswarm(shap_values), height=300)
+    st_shap(shap.plots.beeswarm(shap_values), height=400)
 with st.expander('Feature importance'):
-    shap.plots.bar(shap_values)
+    st_shap(shap.plots.bar(shap_values), height=400)
 
 explainer = shap.TreeExplainer(model)
 shap_values = explainer.shap_values(X)
