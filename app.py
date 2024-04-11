@@ -70,4 +70,4 @@ with st.expander('Force plot'):
     st.subheader('First thousand data instance')
     st_shap(shap.force_plot(explainer.expected_value, shap_values[:1000,:], X_display.iloc[:1000,:]), height=400, width=1000)
     st.subheader('Feature importance')
-    st_shap(shap.plots.bar(shap_values), height=400, width=1000)
+    st_shap(shap.plots.bar(shap_values))
