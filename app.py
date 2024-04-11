@@ -70,3 +70,5 @@ with st.expander('Force plot'):
     st_shap(shap.force_plot(explainer.expected_value, shap_values[0,:], X_display.iloc[0,:]), height=200, width=1000)
     st.subheader('First thousand data instance')
     st_shap(shap.force_plot(explainer.expected_value, shap_values[:1000,:], X_display.iloc[:1000,:]), height=400, width=1000)
+    st.subheader('First thousand data instance')
+    st_shap(shap.plots.force(shap_values[0]), height=400, width=1000)
