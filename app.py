@@ -60,6 +60,8 @@ with st.expander('Waterfall plot'):
     st_shap(shap.plots.waterfall(shap_values[0]), height=300)
 with st.expander('Beeswarm plot'):
     st_shap(shap.plots.beeswarm(shap_values), height=300)
+with st.expander('Feature importance'):
+    shap.plots.bar(shap_values)
 
 explainer = shap.TreeExplainer(model)
 shap_values = explainer.shap_values(X)
